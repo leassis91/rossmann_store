@@ -1,3 +1,3 @@
-# ds_em_producao
+# rossmann_store_sales
 
-This respository contains scripts for Data Science em Produção course
+Try yourself - [Telegram Bot SalesPredictor](http://t.me/rossmannleassis_bot)
