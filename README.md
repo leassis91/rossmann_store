@@ -19,16 +19,20 @@ Since the recent results's accuracy are quite noisy, our work here is to give an
 
 ## 💾 Data Understanding
 
-### - Code Used:
+ ### - Code Used:
 
 * Python Version : 3.8
 * Packages : Pandas, Numpy, Matplotlib, Seaborn, Scikit-Learn among others (please, check full list [here](https://github.com/leassis91/rossmann_store/blob/master/requirements.txt))
 
-### - Importing Dataset:
+<br>
+
+ ### - Importing Dataset:
 
 * Kaggle: https://www.kaggle.com/competitions/rossmann-store-sales/data
 
-### - Data Dictionary
+<br>
+
+ ### - Data Dictionary
 
 | Variable                       | Descriptions                                                      |
 | -------------------------------- | ------------------------------------------------------------ |
@@ -55,7 +59,9 @@ Since the recent results's accuracy are quite noisy, our work here is to give an
    3. The target variable is kind of imbalanced (14% for 1-class), it might have to be treated.
    4. The outliers of the numeric column should be treated. -->
 
-### - Business Assumptions
+<br>
+
+ ### - Business Assumptions
 
   * Stores with sales equal 0 were discarded.
   * Days when stores were closed were discarded.
@@ -75,10 +81,6 @@ where y_i denotes the sales of a single store on a single day and yhat_i denotes
 
 <br>
 
-
-
-<br>
-
 ## 🔬 Solution Approach
 
 The approach used to solve this task was done by applying CRISP-DM methodology, which was divided in the following parts:
@@ -93,13 +95,21 @@ The approach used to solve this task was done by applying CRISP-DM methodology, 
 8. **Hyperparameter Fine Tuning:** search for the best values for each of the parameters of the best performing model(s) selected from the previous step.
 9. **Statistical Error Analysis:** conversion of the performance metrics of the Machine Learning model to a more tangible business result.
 10. **Production Deployment:** deployment of the model in a cloud environment (Heroku), using Flask connected to our model in a pickle file.
-11. **Telegram Bot:** deployment of Telegram Bot API, here used as our user receiver. Check out the link above.
+11. **Telegram Bot:** deployment of Telegram Bot API, here used as our user receiver. Check out at "Deployment" section.
 
+<br>
+
+## 🕵🏽‍♂️Exploratory Data Analysis
+
+in construction
+
+<br>
 
 ## 🚀 Deployment
 
 Try yourself - [Telegram Bot SalesPredictor](http://t.me/rossmannleassis_bot)
 
+<br>
 
 ## 🔗 References
 
@@ -109,7 +119,6 @@ Try yourself - [Telegram Bot SalesPredictor](http://t.me/rossmannleassis_bot)
 <br>
 
 If you have any other suggestion or question, feel free to contact me via [LinkedIn](https://linkedin.com/in/leandrodestefani).
-
 
 ***
 
