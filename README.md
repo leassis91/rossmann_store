@@ -66,9 +66,12 @@ Since the recent results's accuracy are quite noisy, our work here is to give an
  
 ## 🧾 Evaluation Metric
  
- The model evaluation metric for this competition was the "Mean F1-Score". The F1-Score can be interpreted as a harmonic average of "precision" and "recall".
+ We used many error metrics during the project. Main model metric for evaluation was the Root Mean Square Percentage Error (RMSPE). The RMSPE is calculated as  
+<p align="center">
+  <img width="400" src="https://user-images.githubusercontent.com/67332395/175408080-447ca43e-48db-429a-a0ef-9336ec87fce9.png" alt="RMSPE">
+</p>
 
- The F1 metric weights recall and accuracy equally, and a good ranking algorithm will maximize accuracy and recall simultaneously.
+where y_i denotes the sales of a single store on a single day and yhat_i denotes the corresponding prediction. Any day and store with 0 sales is ignored in scoring.
 
 <br>
 
@@ -78,18 +81,19 @@ Since the recent results's accuracy are quite noisy, our work here is to give an
 
 ## 🔬 Solution Approach
 
-The approach was divided in the following parts:
+The approach used to solve this task was done by applying CRISP-DM methodology, which was divided in the following parts:
 
 1. **Data Description:** understanding of the status of the database and dealing with missing values properly. Basic statistics metrics furnish an overview of the data.  
 2. **Feature Engineering:** derivation of new attributes based on the original variables aiming to better describe the phenomenon that will be modeled, and to supply interesting attributes for the Exploratory Data Analysis.
-3. **Data Filtering:** filtering of records and selection of attributes that do not contain information for modeling or that do not match the scope of the business problem.
+3. **Feature Filtering:** filtering of records and selection of attributes that do not contain information for modeling or that do not match the scope of the business problem.
 4. **Exploratory Data Analysis (EDA):** exploration of the data searching for insights and seeking to understand the impact of each variable on the upcoming machine learning modeling.
 5. **Data Preparation:** preprocessing stage required prior to the machine learning modeling step.
 6. **Feature Selection:** selection of the most significant attributes for training the model.
 7. **Machine Learning Modeling:** implementation of a few algorithms appropriate to the task at hand. In this case, models befitting the *regression* assignment - *i.e.*, forecasting a continuous value, namely sales.
 8. **Hyperparameter Fine Tuning:** search for the best values for each of the parameters of the best performing model(s) selected from the previous step.
-9. **Translation and Interpretation of the Model Performance:** conversion of the performance metrics of the Machine Learning model to a more tangible business result.
-10. **Deployment of Model to Production:** publication of the model in a cloud environment so that the interested people can access its results to improve business decisions.
+9. **Statistical Error Analysis:** conversion of the performance metrics of the Machine Learning model to a more tangible business result.
+10. **Production Deployment:** deployment of the model in a cloud environment (Heroku), using Flask connected to our model in a pickle file.
+11. **Telegram Bot:** deployment of Telegram Bot API, here used as our user receiver. Check out the link above.
 
 
 ## 🚀 Deployment
