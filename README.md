@@ -190,8 +190,8 @@ As we can see, our **best scenario** and **worst scenario** only diverge from **
 DS team establish to start another cycle to analyze the problem, seeking different approaches, creating another hypothesis, reconsidering the ones not chosen, and reanalysing stores with behavior that were tough to do the forecast. Some approachs in mind to be made:
 
  - Collect more data;
- - We treat as an aggregate parameter the "sum" of all stores for the assortment hypothesis. Un the 2nd cycle, we could see how it would behave if we used the average;
- - Refine the feature engineering, like trying to find anoher good features;
+ - Change aggregate parameter "sum" to "mean" of all stores for the assortment hypothesis. 'Extended assortment' will probably perform better than the others;
+ - Refine the feature engineering, trying to find another good features;
  - Work with GridSearchCV, as we have more time to tune our model, since its already in production;
  and many more.
 
