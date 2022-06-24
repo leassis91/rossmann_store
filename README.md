@@ -216,6 +216,8 @@ Go say 'Hi!' to our bot! Check it out at:
 1. Data Science Process Alliance - [What is CRISP-DM](https://www.datascience-pm.com/crisp-dm-2/)
 2. Owen Zhang - [Open Source Tools & Data Science Competitions](https://www.slideshare.net/odsc/owen-zhangopen-sourcetoolsanddscompetitions1)
 3. Statstest  - [Cramer's V](https://www.statstest.com/cramers-v-2/)
+4. Bulldogjob - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
 
 <br>
 
