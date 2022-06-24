@@ -22,7 +22,9 @@ Since the recent results's accuracy are quite noisy, our work here is to give an
  ### - Code Used:
 
 * Python Version : 3.8
-* Packages : Pandas, Numpy, Matplotlib, Seaborn, Scikit-Learn among others (please, check full list [here](https://github.com/leassis91/rossmann_store/blob/master/requirements.txt))
+* Packages : Jupyter, Pandas, Numpy, Matplotlib, Seaborn, Scikit-Learn among others (please, check full list [here](https://github.com/leassis91/rossmann_store/blob/master/requirements.txt))
+* Frontend API: Telegram Bot
+* Backend: Heroku
 
 <br>
 
@@ -203,6 +205,7 @@ Go say 'Hi!' to our bot! Check it out at:
 
  - Sign up in Telegram;
  - Submit one number at a time and wait for prediction!
+ - or just look for 'rossmannleassis_bot' in Telegram's search!
 
 ![send](https://github.com/leassis91/rossmann_store/blob/master/img/gif_rossmann.gif)
 
@@ -217,6 +220,15 @@ Go say 'Hi!' to our bot! Check it out at:
 <br>
 
 If you have any other suggestion or question, feel free to contact me via [LinkedIn](https://linkedin.com/in/leandrodestefani).
+
+<br>
+
+## ✍🏽 Author
+
+<!-- - [Leandro Destefani](https://www.kaggle.com/leandrodestefani) -->
+- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leandrodestefani)
+- [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/leassis91)
+- [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ***
 
