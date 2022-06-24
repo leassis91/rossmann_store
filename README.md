@@ -83,7 +83,7 @@ where y_i denotes the sales of a single store on a single day and yhat_i denotes
 
 ## 🔬 Solution Approach
 
-The approach used to solve this task was done by applying CRISP-DM[¹](https://github.com/leassis91/rossmann_store#--references) methodology, which was divided in the following parts:
+The approach used to solve this task was done by applying CRISP-DM[¹](https://github.com/leassis91/rossmann_store#-references) methodology, which was divided in the following parts:
 
 1. **Data Description:** understanding of the status of the database and dealing with missing values properly. Basic statistics metrics furnish an overview of the data.  
 2. **Feature Engineering:** derivation of new attributes based on the original variables aiming to better describe the phenomenon that will be modeled, and to supply interesting attributes for the Exploratory Data Analysis.
