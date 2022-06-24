@@ -74,12 +74,12 @@ Since the recent results's accuracy are quite noisy, our work here is to give an
  
 ## 🧾 Evaluation Metric
  
- We used many error metrics during the project. Main model metric for evaluation was the Root Mean Square Percentage Error (RMSPE). The RMSPE is calculated as  
+ We used many error metrics during the project. Main model metric for evaluation was the Root Mean Squared Error (RMSE). The RMSE is calculated as  
 <p align="center">
   <img width="400" src="https://user-images.githubusercontent.com/67332395/175569005-2bd2789e-85bc-44d8-8378-faa3e03f019c.png" alt="RMSE">
 </p>
 
-where *y_hat* is the predicted value, *y* is the ground truth value, and *n* is the number of rows in the test data.
+where *y_hat* is the predicted value, *y* is the ground truth value, and *n* is the number of stores in the dataset.
 
 <br>
 
