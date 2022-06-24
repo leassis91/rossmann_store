@@ -76,10 +76,10 @@ Since the recent results's accuracy are quite noisy, our work here is to give an
  
  We used many error metrics during the project. Main model metric for evaluation was the Root Mean Square Percentage Error (RMSPE). The RMSPE is calculated as  
 <p align="center">
-  <img width="400" src="https://user-images.githubusercontent.com/67332395/175408080-447ca43e-48db-429a-a0ef-9336ec87fce9.png" alt="RMSPE">
+  <img width="400" src="https://user-images.githubusercontent.com/67332395/175569005-2bd2789e-85bc-44d8-8378-faa3e03f019c.png" alt="RMSE">
 </p>
 
-where y_i denotes the sales of a single store on a single day and yhat_i denotes the corresponding prediction. Any day and store with 0 sales is ignored in scoring.
+where *y_hat* is the predicted value, *y* is the ground truth value, and *n* is the number of rows in the test data.
 
 <br>
 
@@ -225,10 +225,11 @@ If you have any other suggestion or question, feel free to contact me via [Linke
 
 ## ✍🏽 Author
 
-<!-- - [Leandro Destefani](https://www.kaggle.com/leandrodestefani) -->
-- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leandrodestefani)
-<!-- - [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/leassis91) -->
-- [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+- [Leandro Destefani](https://github.com/leassis91)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leandrodestefani) [![gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:leassis.destefani@gmail.com) [![kaggle](https://img.shields.io/badge/Kaggle-3776AB?style=for-the-badge&logo=&logoColor=white)](https://kaggle.com/leandrodestefani)
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ***
 
