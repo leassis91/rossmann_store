@@ -164,35 +164,34 @@ Although the Random Forest model has proven to be superior to the others, in som
 
 ## Business Performance
 
-It is now possible to analyze the metrics and compare the difference in performance between the current model used by the company (**Average Model**) and the model proposed by the data scientist (**XGBoost Regressor**)
+According to our forecasting model, we achieved an efficiency improvement of 48.37% compared to previous forecasts (Average Model had 1354.8 for MAE and our new model has 699.43).
+Translating into business terms, we calculate the sum of worst and best revenue scenarios, and the respective forecasts made.
 
-*under construction*
+| Scenario | Values |
+|-----------|---------|
+| Predictions | R$285,934,117.20 |
+| Worst Scenario | R$285,150,484.70 |
+| Best Scenario | R$286,717,749.69 |
+
+As we can see, our **best scenario** and **worst scenario** only diverge from **predictions** by 0.27%: certainly more assertive than previous one.
 
 <br>
 
 ## 💡 Conclusions
 
- - The XGBoost Model for the first cycle (CRISP-DM Methodology) presented a result within the acceptable range, although some stores were difficult to have the expected behavior presenting the MAPE (Mean Absolute Percentage Error) between 0.30 to 0.56, this first result it will be presented to the company, to inform the project status and what is already available as a solution.
-
-*under construction*
+ - XGBoostRegressor model had the best performance when it comes to **Results/Time * Accuracy**, and thus gave us a more assertive prediction, helping our CFO on taking futures decisions about budget and repairing the stores.
 
 <br>
 
 ## 👣 Next steps
 
-DS team establish to start another cycle to analyze the problem, seeking different approaches, especially considering stores with behavior that is difficult to predict. In these stores the Data scientist ought gain plenty of experience.
+DS team establish to start another cycle to analyze the problem, seeking different approaches, creating another hypothesis, reconsidering the ones not chosen, and reanalysing stores with behavior that were tough to do the forecast. Some approachs in mind to be made:
 
-*under construction*
-
-<!-- Possible points to be addressed in the second cycle:
-
--**Work with NA data differently**
-
--**Rescaling and Encoding of data with different methodologies**
-
--**Work with new features for forecasting**
-
--**Work with a more robust method to find the best Hyper parameters for the model** -->
+ - Collect more data;
+ - We treat as an aggregate parameter the "sum" of all stores for the assortment hypothesis. Un the 2nd cycle, we could see how it would behave if we used the average;
+ - Refine the feature engineering, like trying to find anoher good features;
+ - Work with GridSearchCV, as we have more time to tune our model, since its already in production;
+ and many more.
 
 <br>
 
@@ -201,6 +200,11 @@ DS team establish to start another cycle to analyze the problem, seeking differe
 Go say 'Hi!' to our bot! Check it out at:
 
 [<img alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/>](http://t.me/rossmannleassis_bot)
+
+ - Sign up in Telegram;
+ - Submit one number at a time and wait for prediction!
+
+![send](https://github.com/leassis91/rossmann_store/blob/master/img/gif_rossmann.gif)
 
 <br>
 
