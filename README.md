@@ -13,7 +13,7 @@ Rossmann operates over 3,000 drug stores in 7 European countries. Currently, Ros
 
 *Forecasting the sales' income of the next 6 weeks.*
 
-Since the recent results's accuracy are quite noisy, our work here is to give an assertive prediction of the sales of each store, up to 6 weeks in advance. This task has been assined to the whole team of Data Scientists, who are given a historical database in order to generate the desired forecasting. To catch up all details of the request, the team had a business meeting with company's CFO, who explained the need to establish a budget to carry out a general repair in each store.
+Since the recent results's accuracy are quite noisy, our work here is to give an **assertive prediction** of the sales of each store, up to 6 weeks in advance. This task has been assined to the whole team of Data Scientists, who are given a historical database in order to generate the desired forecasting. To catch up all details of the request, the team had a business meeting with company's CFO, who explained the need to establish a budget to carry out a general repair in each store.
 
 <br>
 
@@ -83,7 +83,7 @@ where y_i denotes the sales of a single store on a single day and yhat_i denotes
 
 ## 🔬 Solution Approach
 
-The approach used to solve this task was done by applying CRISP-DM[¹](https://github.com/leassis91/rossmann_store#-references) methodology, which was divided in the following parts:
+The approach used to solve this task was done by applying CRISP-DM¹ methodology, which was divided in the following parts:
 
 1. **Data Description:** understanding of the status of the database and dealing with missing values properly. Basic statistics metrics furnish an overview of the data.  
 2. **Feature Engineering:** derivation of new attributes based on the original variables aiming to better describe the phenomenon that will be modeled, and to supply interesting attributes for the Exploratory Data Analysis.
@@ -99,15 +99,106 @@ The approach used to solve this task was done by applying CRISP-DM[¹](https://g
 
 <br>
 
-## 🕵🏽‍♂️Exploratory Data Analysis
+## 🕵🏽‍♂️Exploratory Data Analysis & Main Insights
 
-in construction
+### - Numerical Attributes Correlation
+
+![image](https://user-images.githubusercontent.com/67332395/175460617-43a48c17-d3e0-4d05-9c86-b7d7be891572.png)
+
+### - Categorical Attributes Correlation
+
+![image](https://user-images.githubusercontent.com/67332395/175460670-83e08358-dd8f-432a-ad87-51037abe5fad.png)
+
+### - Main Hypothesis Chosen
+
+Here, the criterion used to choose the main hypotheses was in the sense of how shocking and impacting the result would be for the business team's beliefs.
+
+- **Hypothesis 1 (H2 in notebook):** Stores with closer competitors should sell less. 
+   ***False:*** Data showed us that, actually, they sell MORE.
+   
+   Business team's belief revealed us their thoughts on lower sales while drugstores are closer to the competitors. This hypothesis proves the opposite The correlation analysis of "competition distance" and "sales" shows a small correlation, indicating that sales do not increase when competitors are closer.
+   
+   ![image](https://user-images.githubusercontent.com/67332395/175464452-7d3ae44c-9e38-435a-9029-e5c95f4c55ba.png)
+
+
+- **Hypothesis 2 (H4 in notebook):** Stores with longer active offers should sell more.
+   ***False:*** Data showed us that, stores that kept products on sale for a long time performed worse than before.
+   
+   Again, we shocked business team's belief and common sense that. Here are the visualizations.
+   
+   ![image](https://user-images.githubusercontent.com/67332395/175464762-d1ba1d94-3e8f-4372-a435-f8e5c4603740.png) 
+   
+   
+- **Hypothesis 3:** Stores should sell more after the 10th day of each month.  
+   ***True:*** the average performance is better after 10 days of the month.
+   
+   ![image](https://user-images.githubusercontent.com/67332395/175465319-f058885e-1deb-45f2-b401-d6515bb71727.png)
+
+<br>
+
+## 💻 Machine Learning Modeling & Evaluation
+
+ * Cross Validation
+ 
+  *Performance on 5 K-Fold CV.*
+
+| Model Name | MAE CV   | MAPE CV      | RMSE CV |
+|-----------|---------|-----------|---------|
+|  Random Forest Regressor  | 837.68 +/- 218.74| 0.12 +/- 0.02  | 1256.08 +/- 320.36 |
+|  XGBoost Regressor	  | 1039.91 +/- 167.19 | 0.14 +/- 0.02   | 1478.26 +/- 258.52 |
+|  Linear Regression	  | 2081.73 +/- 295.63 | 0.3 +/- 0.02   | 2952.52 +/- 468.37 |
+|  Linear Regression - Lasso	  | 2116.38 +/- 341.50 | 0.29 +/- 0.01	   | 3057.75 +/- 504.26 |
+
+
+Although the Random Forest model has proven to be superior to the others, in some cases this model ends up requiring a lot of space to be published, resulting in an extra cost for the company to keep it running. Therefore, the chosen algorithm was the **XGBoost Regressor** which in sequence passed to the Hyperparameter Fine Tunning step.
+
+<br>
+
+ * Final Model (after Hyperparameter Fine-Tuning)
+
+| Model Name | Mean Absolute Error | Mean Absolute Percentage Error | Root Mean Squared Error |
+| ---- | :----: | :----: | :----: |
+| XGBoost Regressor | 699.43 | 0.1037 | 1005.6039 |
+
+<br>
+
+## Business Performance
+
+It is now possible to analyze the metrics and compare the difference in performance between the current model used by the company (**Average Model**) and the model proposed by the data scientist (**XGBoost Regressor**)
+
+
+
+<br>
+
+## 💡 Conclusions
+
+ - it is possible to understand that although the model based on averages is simple, it is still coherent however not sensible enogh to comprehend store's oscilations, but if machine learn models were too expensive it would be a good choice to solve this problem, of course the data scientist and the CFO should consider its leak of precision in some points.
+
+ - The XGBoost Model for the first cycle (CRISP-DM Methodology) presented a result within the acceptable range, although some stores were difficult to have the expected behavior presenting the MAPE (Mean Absolute Percentage Error) between 0.30 to 0.56, this first result it will be presented to the company, to inform the project status and what is already available as a solution.
+
+<br>
+
+## 👣 Next steps
+
+DS team establish to start another cycle to analyze the problem, seeking different approaches, especially considering stores with behavior that is difficult to predict. In these stores the Data scientist ought gain plenty of experience.
+
+Possible points to be addressed in the second cycle:
+
+-**Work with NA data differently**
+
+-**Rescaling and Encoding of data with different methodologies**
+
+-**Work with new features for forecasting**
+
+-**Work with a more robust method to find the best Hyper parameters for the model**
 
 <br>
 
 ## 🚀 Deployment
 
-Try it yourself! [Telegram Bot SalesPredictor](http://t.me/rossmannleassis_bot)
+Go say 'Hi!' to our bot! Check it out at:
+
+[<img alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/>](http://t.me/rossmannleassis_bot)
 
 <br>
 
