@@ -164,7 +164,7 @@ Although the Random Forest model has proven to be superior to the others, in som
 
 <br>
 
-## Business Performance
+## 📉 Business Performance
 
 According to our forecasting model, we achieved an efficiency improvement of 48.37% compared to previous forecasts (Average Model had 1354.8 for MAE and our new model has 699.43).
 Translating into business terms, we calculate the sum of worst and best revenue scenarios, and the respective forecasts made.
