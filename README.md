@@ -101,7 +101,7 @@ The approach used to solve this task was done by applying CRISP-DM¹ methodology
 
 <br>
 
-## 🕵🏽‍♂️Exploratory Data Analysis & Main Insights
+## 🕵🏽‍♂️ Exploratory Data Analysis & Main Insights
 
 ### - Numerical Attributes Correlation
 
